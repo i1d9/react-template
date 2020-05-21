@@ -1,22 +1,37 @@
 import axios from 'axios';
 import { storage } from '../firebase';
-const initialState = {
+
+
+
+const contentDefaultState = {
     /**
      * Initiate Your States here
      */
     isLoading: false,
+    counter:0,
    
 
 }
 
 
-export const contentReducer = (state= initialState,action)=>{
+export const contentReducer = (state= contentDefaultState,action)=>{
 
     switch(action.type){
         case 'LOADING_CONTENT':
             return {
                 ...state,
                 isLoading: !state.isLoading
+            };
+
+            case 'ADD_COUNTER':
+            return {
+                ...state,
+                counter: state.counter+1,
+            };
+            case 'REDUCE_COUNTER':
+            return {
+                ...state,
+                counter: state.counter-1,
             };
         default:
             return state;
@@ -29,6 +44,22 @@ const loadingContent = () => {
         type: 'LOADING_CONTENT',
     };
 }
+
+
+export const addCounter = () => {
+    return {
+        type: 'ADD_COUNTER',
+    };
+}
+
+
+export const reduceCounter = () => {
+    return {
+        type: 'REDUCE_COUNTER',
+    };
+}
+
+
 
 /*
 export const functionName = () => {

@@ -6,7 +6,7 @@ import { createStore, applyMiddleware } from 'redux';
 const saveState = (DefaultState) => {
     try {
         const serializedState = JSON.stringify(DefaultState);
-        localStorage.setItem('State', serializedState);
+        localStorage.setItem('MyLocalState', serializedState);
     } catch (error) {
 
     }
@@ -15,7 +15,7 @@ const saveState = (DefaultState) => {
 //Load the state from local storage
 const loadState = () => {
     try {
-        const serializedState = localStorage.getItem('State');
+        const serializedState = localStorage.getItem('MyLocalState');
         if (serializedState == null) {
             return undefined;
         }
