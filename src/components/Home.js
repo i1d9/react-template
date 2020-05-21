@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {} from '../reducers/contentReducer';
+
+import Container from '@material-ui/core/Container';
+//import {ReducerFunctionHere} from '../reducers/contentReducer';
 import {
     Link,
     Redirect
 } from "react-router-dom";
+import { Typography } from '@material-ui/core';
 
 const mapStateToProps = state => {
     return {
@@ -32,7 +35,16 @@ const mapDispatchToProps = dispatch => {
 };
 class Home extends Component {
 
+    constructor(props){
+        super(props);
+        this.state={
+
+        };
+    }
+
     componentWillMount(){
+        console.log(this.props);
+        console.log('bbhjbh')
         /*
         Calling functions from the reducers
         this.props.loadFeed();
@@ -40,15 +52,17 @@ class Home extends Component {
         */
     }
   render() {
+         //  <Link to="/">Other Component</Link>
+        //  <Redirect to='/' />
+           
     return (
-      <div>
-          My Component
-          {
-              //  <Link to="/">Other Component</Link>
-              //  <Redirect to='/' />
-                      
-          }
-      </div>
+
+        <Container maxWidth="sm">
+          <h1>My Component</h1>   
+          <Typography>
+            My component
+        </Typography>       
+      </Container>
     );
   }
 }

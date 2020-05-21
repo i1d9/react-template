@@ -1,5 +1,5 @@
 import './App.css';
-import { Provider } from 'redux-thunk'
+import  Provider  from 'redux-thunk'
 
 import {
   BrowserRouter as Router,
@@ -8,6 +8,7 @@ import {
 import { store } from './app-redux';
 
 import React, { Component } from 'react';
+import Home from '../src/components/Home'
 
 class App extends Component {
   render() {
@@ -16,7 +17,8 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <Switch>
-            <Route exact path="Route Name" component={'Component Name'} />
+
+            <Route exact path="/" component={Home} />
           </Switch>
         </Router>
       </Provider>

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { storage } from '../firebaseAPI';
+import { storage } from '../firebase';
 const initialState = {
     /**
      * Initiate Your States here
