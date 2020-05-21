@@ -1,4 +1,11 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a react template to get you started with a project.
+
+## NPM Packages Used
+
+1. Firebase - https://firebase.google.com/docs/web/setup
+2. Redux - https://redux.js.org/introduction/getting-started
+3. Material UI - https://material-ui.com/getting-started/usage/
+4. Axios - https://github.com/axios/axios
 
 ## Available Scripts
 
